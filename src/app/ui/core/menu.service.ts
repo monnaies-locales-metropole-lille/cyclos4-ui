@@ -1371,7 +1371,7 @@ export class MenuService {
       }
 
       if (marketplace.userSimple.view || marketplace.userWebshop.view) {
-        add(Menu.SEARCH_ADS, '/marketplace/search', SvgIcon.Basket, this.i18n.menu.marketplaceAdvertisements);
+        add(Menu.SEARCH_ADS, '/marketplace/search', SvgIcon.Announcement, this.i18n.menu.marketplaceAdvertisements);
       }
 
       if (marketplace.userWebshop.purchase) {
@@ -1398,7 +1398,7 @@ export class MenuService {
         add(
           Menu.SEARCH_USER_ADS,
           'marketplace/self/simple/list',
-          SvgIcon.Basket,
+          SvgIcon.Announcement,
           this.i18n.menu.marketplaceMyAdvertisements
         );
       }

@@ -27,7 +27,7 @@ export class QuickAccessHelperService {
     private recordHelper: RecordHelperService,
     private tokenHelper: TokenHelperService,
     @Inject(I18nInjectionToken) private i18n: I18n
-  ) {}
+  ) { }
 
   /**
    * Returns the icon to be used in the given quick access
@@ -105,7 +105,7 @@ export class QuickAccessHelperService {
       case QuickAccessTypeEnum.PURCHASES:
         return { icon: SvgIcon.Cart3, label: this.i18n.dashboard.action.purchases };
       case QuickAccessTypeEnum.MY_ADS:
-        return { icon: SvgIcon.Basket, label: this.i18n.dashboard.action.myAds };
+        return { icon: SvgIcon.Announcement, label: this.i18n.dashboard.action.myAds };
       case QuickAccessTypeEnum.CREATE_AD:
         return { icon: SvgIcon.Basket, label: this.i18n.dashboard.action.createAd };
       case QuickAccessTypeEnum.MY_WEBSHOP:

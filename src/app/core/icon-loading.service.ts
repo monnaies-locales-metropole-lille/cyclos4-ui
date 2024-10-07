@@ -5,6 +5,7 @@ import { SvgIcon } from 'app/core/svg-icon';
 import { isDevServer } from 'app/shared/helper';
 import { Observable, of } from 'rxjs';
 import { first, tap } from 'rxjs/operators';
+import * as builtinSvg from '../../svg/icons.json'
 
 const builtin = new Set(Object.values(SvgIcon));
 
@@ -23,11 +24,14 @@ export class IconLoadingService {
     if (typeof current === 'string') {
       try {
         this.icons = { ...JSON.parse(current) };
-      } catch (e) {}
+      } catch (e) { }
     } else if (typeof current === 'object') {
       this.icons = { ...current };
     } else {
       this.icons = {};
+    }
+    if (Object.keys(this.icons).length === 0) {
+      this.store(builtinSvg)
     }
   }
 

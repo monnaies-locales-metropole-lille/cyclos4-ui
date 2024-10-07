@@ -18,6 +18,7 @@ export enum SvgIcon {
   Backspace = 'backspace',
   Bag2 = 'bag2',
   Basket = 'basket',
+  Announcement = 'announcement',
   Bell = 'bell',
   BellSlash = 'bell-slash',
   Book = 'book',
