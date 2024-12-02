@@ -9,4 +9,6 @@ FROM nginx:latest
 RUN mkdir /app
 COPY --from=build-stage /app/dist/ui/ /app
 COPY nginx.conf /etc/nginx/nginx.conf
+COPY docker-entrypoint.sh /
 USER nginx
+ENTRYPOINT ["/docker-entrypoint.sh"]
