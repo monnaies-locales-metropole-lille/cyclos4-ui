@@ -3,8 +3,8 @@ export const environment = {
   production: true,
 
   // The frontend bundled with Cyclos is not standalone: it allows redirects to the classic frontend
-  standalone: false,
+  standalone: true,
 
   // The API path / URL when in standalone mode
-  apiUrl: '/api'
+  apiUrl: window["env"]["apiUrl"]
 };
